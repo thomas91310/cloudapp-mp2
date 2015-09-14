@@ -104,7 +104,7 @@ public class TitleCount extends Configured implements Tool {
             for (IntWritable val: values) {
                 sum += val.get();
             }
-            context.write(key, IntWritable(sum));
+            context.write(key, new IntWritable(sum));
         }
     }
 }
